@@ -1,0 +1,45 @@
+{
+  "name": "xpressnsocket",
+  "version": "1.0.0",
+  "description": "An app to showcase how we can natively share express sessions with socket.io",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "corss-env NODE_ENV=development nodemon server.js",
+    "start-app": "cross-env NODE_ENV=development nodemon app2.js",
+    "start-prod": "cross-env NODE_ENV=production nodemon app2.js",
+    "build-prod": "cross-env NODE_ENV=production rm -rf build && cd client && rm -rf build && npm run build && cp -r build ../",
+    "start:heroku": "node app2.js",
+    "start": "cross-env node server.js"
+  },
+  "author": "Telios WebDev",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "clarify": "^1.0.5",
+    "compression": "^1.6.1",
+    "connect-mongo": "^4.6.0",
+    "connect-redis": "^6.1.3",
+    "dotenv": "^16.0.2",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-ejs-layouts": "^2.0.0",
+    "express-session": "^1.13.0",
+    "http-proxy": "^1.18.1",
+    "mongoose": "^6.6.1",
+    "morgan": "^1.7.0",
+    "nodemon": "^2.0.20",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "redis": "^4.3.1",
+    "socket.io": "^4.5.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
