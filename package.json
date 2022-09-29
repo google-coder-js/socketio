@@ -13,7 +13,7 @@
     "start-prod": "cross-env NODE_ENV=production nodemon app2.js",
     "build-prod": "cross-env NODE_ENV=production rm -rf build && cd client && rm -rf build && npm run build && cp -r build ../",
     "start:heroku": "node app2.js",
-    "start": "cross-env node server.js"
+    "start": "cross-env node app2.js"
   },
   "engines": {
     "node": ">=16.0.0"
