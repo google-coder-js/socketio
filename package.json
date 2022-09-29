@@ -15,6 +15,9 @@
     "start:heroku": "node app2.js",
     "start": "cross-env node server.js"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "author": "Telios WebDev",
   "license": "MIT",
   "dependencies": {
